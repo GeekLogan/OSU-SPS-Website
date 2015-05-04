@@ -1,0 +1,7 @@
+<pages>
+  <page label="Home" index="True">index</page>
+  <page label="Schedule" index="True">schedule</page>
+  <!--<page label="Officers" index="True">officers</page>-->
+  <page label="Contact" index="True">contact</page>
+  <page label="Photos" index="True">photos</page>
+</pages>
