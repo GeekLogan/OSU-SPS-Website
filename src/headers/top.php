@@ -40,9 +40,7 @@
 					}
 				}
 				$line .= "</a></div>\n";
-				//if($label != $title) {
-					echo $line;
-				//}
+				echo $line;
 		}
 	}
 ?>
