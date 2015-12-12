@@ -1,90 +1,31 @@
-import os
-import xml.etree.ElementTree as ET
+# OSU SPS Website Build Script
 
-def buildPage( name, folder ):
-    command = "php "
-    command += "src/"
-    command += name
-    command += ".php >> "
-    command += folder
-    command += "/"
-    command += name
-    command += ".html"
-    return os.system(command);
+def loadFile( src, prefx ):
+    out = ""
+    for line in open( src, 'r' ):
+        out += prefx + line
+    return out
 
-indexFile = "src/pages.xml"
-outputFolder = "output"
-version = "0.2"
+def outputFile( name, content ):
+    file = open( name, 'w' )
+    file.write( content )
+    file.close()
+    
+out_folder = "output/"
+src_folder = "src/"
+includes_folder = src_folder + "includes/"
 
-spacer = ""
-for i in range(80):
-    print " "
-    spacer += "-"
+header = loadFile( includes_folder + "header.html", "" )
+header = header.replace( "[STYLE]", loadFile( includes_folder + "style.css", "\t" ) )
+header = header.replace( "[SCRIPT]", loadFile( includes_folder + "script.js", "\t" ) )
 
-loadingText = [
-    " ",
-    spacer,
-    " ",
-    "Loading Logan's PHP HTML Precompiler...",
-    "Script Version: " + version,
-    "Loading Index From: " + indexFile,
-    "Output HTML will be in: " + outputFolder,
-    " ",
-    spacer,
-    " ",
-    "Cleaning output folder...",
-    "\t(If an error occurs on this line, there may be nothing in output folder)"
+footer = loadFile( includes_folder + "footer.html", "" )
+
+names = [
+    "index.html"
 ]
 
-for line in loadingText:
-    print line
-
-status = os.system("rm -R " + outputFolder + "/*")
-print "\t Status: " + `status`
-print ""
-
-print "Loading XML Document..."
-print " "
-tree = ET.parse(indexFile)
-root = tree.getroot()
-print "Files from XML: "
-for child in root:
-    out = "\t"
-    out += child.text
-    out += ".php"
-    print out
-print " "
-
-statusTotal = 0
-
-i = 1
-for child in root:
-    pageName = child.text
-    print "Page #" + `i` + ": "
-    print "\tBuilding " + pageName + ".php..."
-    status = buildPage(pageName, outputFolder)
-    statusTotal += status
-    print "\tStatus: " + `status`
-    print "\t" + pageName + ".html has been built in " + outputFolder + '!'
-    print " "
-    i += 1
-
-print spacer
-print " "
-
-if(statusTotal != 0):
-    print "An error may have occurred!"
-    print "Status code: " + `statusTotal`
-else:
-    print "All pages successfully compiled!"
-
-print " "
-print spacer
-print " "
-
-print "Executing Run-After Script..."
-execfile("build-after.py")
-
-print " "
-print spacer
-print " "
+for name in names:
+    raw = loadFile( src_folder + name, "" )
+    raw = header + raw + footer
+    outputFile( out_folder + name, raw )
