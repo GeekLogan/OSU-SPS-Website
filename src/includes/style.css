@@ -1,10 +1,10 @@
 body {
-  font-family: Helvetica;
+  font-family: RobotoDraft, Roboto, proximanova, Arial, sans-serif;
   margin: 0px;
   padding: 0px;
-  background-color: #666666;
+  background-color: #e0e0e0;
   line-height: 150%;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 a.nostyle:link {
@@ -21,13 +21,20 @@ table {
   border-collapse: collapse;
 }
 
+#top {
+	width: 100%;
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size:25px;
+	margin-bottom: 20px;
+}
+
 #main {
-	background-color: #BBBBBB;
-	width: 500px;
 }
 
 #footer {
-  color: #FFFFFF;
+  color: black;
   text-alignment: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
