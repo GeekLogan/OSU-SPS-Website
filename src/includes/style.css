@@ -21,7 +21,7 @@ table {
   border-collapse: collapse;
 }
 
-#top {
+div#top {
 	width: 100%;
 	background-color: white;
 	padding-top: 20px;
@@ -30,11 +30,29 @@ table {
 	margin-bottom: 20px;
 }
 
-#main {
+div#main {
+	margin: 0px;
 }
 
-#footer {
-  color: black;
-  text-alignment: center;
-  margin-top: 20px;
+div#footer {
+	margin-top: 10px;
+	color: black;
+	text-alignment: center;
+}
+
+div.card {
+	margin: 10px;
+	background-color: white;
+	color: black;
+	width: 80%;
+	
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 20px;
+	
+	text-align: left;
+}
+
+div.card_holder{
+	
 }

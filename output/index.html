@@ -31,7 +31,7 @@
 	  border-collapse: collapse;
 	}
 	
-	#top {
+	div#top {
 		width: 100%;
 		background-color: white;
 		padding-top: 20px;
@@ -40,13 +40,31 @@
 		margin-bottom: 20px;
 	}
 	
-	#main {
+	div#main {
+		margin: 0px;
 	}
 	
-	#footer {
-	  color: black;
-	  text-alignment: center;
-	  margin-top: 20px;
+	div#footer {
+		margin-top: 10px;
+		color: black;
+		text-alignment: center;
+	}
+	
+	div.card {
+		margin: 10px;
+		background-color: white;
+		color: black;
+		width: 80%;
+		
+		margin-top: 30px;
+		margin-bottom: 30px;
+		padding: 20px;
+		
+		text-align: left;
+	}
+	
+	div.card_holder{
+		
 	}
   </style>
 
@@ -58,24 +76,41 @@
 
 <body>
 
-<center>
-
 <div id="top">
-<b>Ohio State Society of Physics Students</b>
+	<center>
+		<b>Ohio State Society of Physics Students</b>
+	</center>
 </div>
 
 <div id="main">
-Hello World</div>
+<center>
 
-</center>
+<div class="card_holder">
 
-<center id="footer">
-  Website Developed 2016 by
-  <a class="nostyle" href="mailto:walker.1698@osu.edu">Logan Walker</a>
-  <br />
-  Last Updated December 12, 2015 - Code maintained on 
-  <a class="nostyle" href="https://github.com/GeekLogan/OSU-SPS-Website">GitHub</a>
-</center>
+<div class="card">
+Test
+</div>
+
+<div class="card">
+Test
+</div>
+
+<div class="card">
+Test
+</div>
+
+</div>
+
+</center></div>
+
+<div id="footer">
+	<center>
+		Website Developed 2016 by
+		<a class="nostyle" href="mailto:walker.1698@osu.edu">Logan Walker</a>
+		<br />
+		Last Updated December 12, 2015 - Code maintained on 
+		<a class="nostyle" href="https://github.com/GeekLogan/OSU-SPS-Website">GitHub</a>
+</div>
 
 </body>
 </html>
