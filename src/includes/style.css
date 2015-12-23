@@ -22,12 +22,18 @@ table {
 }
 
 div#top {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
 	width: 100%;
 	background-color: white;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-size:25px;
 	margin-bottom: 20px;
+
+    z-index: 2;
 }
 
 div#main {
@@ -45,14 +51,29 @@ div.card {
 	background-color: white;
 	color: black;
 	width: 80%;
-	
+
 	margin-top: 30px;
 	margin-bottom: 30px;
 	padding: 20px;
-	
+
 	text-align: left;
 }
 
-div.card_holder{
-	
+div.card_holder {
+
+}
+
+div.spacerdiv {
+    z-index:0;
+    height:60px;
+    width:100%;
+}
+
+#homebutton {
+    position: fixed;
+    top: 6px;
+    left: 10px;
+
+    width: 50px;
+    height: 50px;
 }
