@@ -33,6 +33,10 @@ div#top {
 	font-size:25px;
 	margin-bottom: 20px;
 
+    border-bottom-width: 1px;
+    border-bottom-color: #C8C8C8;
+    border-bottom-style: solid;
+
     z-index: 2;
 }
 
@@ -44,6 +48,7 @@ div#footer {
 	margin-top: 10px;
 	color: black;
 	text-alignment: center;
+    margin-bottom: 25px;
 }
 
 div.card {
@@ -56,6 +61,10 @@ div.card {
 	margin-bottom: 30px;
 	padding: 20px;
 
+    border-width: 1px;
+    border-color: #C8C8C8;
+    border-style: solid;
+
 	text-align: left;
 }
 
@@ -67,13 +76,4 @@ div.spacerdiv {
     z-index:0;
     height:60px;
     width:100%;
-}
-
-#homebutton {
-    position: fixed;
-    top: 6px;
-    left: 10px;
-
-    width: 50px;
-    height: 50px;
 }
