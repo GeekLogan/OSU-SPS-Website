@@ -80,14 +80,42 @@
 		text-align: left;
 	}
 	
-	div.card_holder {
+	a:link.cardlink { /* unvisited */
+		text-decoration: none;
+	}
 	
+	a:visited.cardlink { /* visited */
+		text-decoration: none;
+	}
+	
+	a:hover.cardlink { /* mouse over */
+		text-decoration: none;
+	}
+	
+	a:active.cardlink { /* selected */
+		text-decoration: none;
 	}
 	
 	div.spacerdiv {
 	    z-index:0;
 	    height:60px;
 	    width:100%;
+	}
+	
+	a:link#home { /* unvisited */
+	    color: black;
+	}
+	
+	a:visited#home { /* visited */
+	    color: black;
+	}
+	
+	a:hover#home { /* mouse over */
+	    color: black; /* red? */
+	}
+	
+	a:active#home { /* selected */
+	    color: black;
 	}
 
   </style>
@@ -100,18 +128,18 @@
 
 <body>
 
-<div id="top">
-	<center>
-		<b>Ohio State Society of Physics Students</b>
-	</center>
-</div>
+<a href="index.html" id="home">
+	<div id="top">
+		<center>
+			<b>Ohio State Society of Physics Students</b>
+		</center>
+	</div>
+</a>
 
 <div id="main">
 
 <div class="spacerdiv"></div>
 <center>
-
-<div class="card_holder">
 
 <div class="card">
 
@@ -119,8 +147,6 @@
 <br /><br />
 
 <iframe style="width:100%; height:400px;" src="https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/pubhtml?widget=true&amp;headers=false"></iframe>
-
-</div>
 
 </div>
 

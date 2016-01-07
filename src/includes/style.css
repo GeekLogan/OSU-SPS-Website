@@ -70,12 +70,40 @@ div.card {
 	text-align: left;
 }
 
-div.card_holder {
+a:link.cardlink { /* unvisited */
+	text-decoration: none;
+}
 
+a:visited.cardlink { /* visited */
+	text-decoration: none;
+}
+
+a:hover.cardlink { /* mouse over */
+	text-decoration: none;
+}
+
+a:active.cardlink { /* selected */
+	text-decoration: none;
 }
 
 div.spacerdiv {
     z-index:0;
     height:60px;
     width:100%;
+}
+
+a:link#home { /* unvisited */
+    color: black;
+}
+
+a:visited#home { /* visited */
+    color: black;
+}
+
+a:hover#home { /* mouse over */
+    color: black; /* red? */
+}
+
+a:active#home { /* selected */
+    color: black;
 }
