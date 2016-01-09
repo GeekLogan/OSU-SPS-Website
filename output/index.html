@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
 
-  <title>Society of Physics | Ohio State University</title>
-  <meta name="description" content="Society of Physics Students at Ohio State">
-  <meta name="author" content="Logan Walker">
+<title>Society of Physics | Ohio State University</title>
+<meta name="description" content="Society of Physics Students at Ohio State">
+<meta name="author" content="Logan Walker">
+<meta charset="utf-8">
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-  <style>
+<style>
 	body {
 	  font-family: RobotoDraft, Roboto, proximanova, Arial, sans-serif;
 	  margin: 0px;
@@ -118,52 +120,66 @@
 	    color: black;
 	}
 
-  </style>
-
-  <script type="text/javascript">
-
-  </script>
+</style>
 
 </head>
 
 <body>
 
-<a href="index.html" id="home">
-	<div id="top">
-		<center>
-			<b>Ohio State Society of Physics Students</b>
-		</center>
-	</div>
-</a>
+<div id="top">
+	<center>
+		<b>Ohio State Society of Physics Students</b>
+	</center>
+</div>
 
 <div id="main">
 
 <div class="spacerdiv"></div>
+
 <center>
 
 <div class="card">
 Information
 </div>
 
-<a href="contact.html" class="cardlink">
-	<div class="card">
-		Contact Officers
+<div class="card" id="card_contact">
+	Contact Officers
+	<div class="tohide">
+		<br />
+		Officers:
 	</div>
-</a>
+</div>
 
-<a href="books.html" class="cardlink">
-	<div class="card">
-		Physics Library
+<div class="card" id="card_lib">
+	Physics Library
+	<div class="tohide">
+		<br />
+		<iframe style="width:100%; height:400px;" src="https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/pubhtml?widget=true&amp;headers=false"></iframe>
 	</div>
-</a>
+</div>
 
 <a href="https://www.facebook.com/groups/SPSatOSU/" class="cardlink">
 	<div class="card">
-		FaceBook
+		<span style="color:#3b5998;">
+			<b>FaceBook</b>
+		</span>
 	</div>
 </a>
 
+<script>
+
+$( ".tohide" ).toggle(0, function(){});
+
+['lib', 'contact'].forEach(function( name ){
+	$("#card_" + name).click(function(){
+		$("#card_" + name).find(".tohide").toggle("fast", function(){});
+	});
+});
+
+</script>
+
 </center>
+
 </div>
 
 <div id="footer">
@@ -171,7 +187,7 @@ Information
 		Website Developed 2016 by
 		<a class="nostyle" href="mailto:walker.1698@osu.edu">Logan Walker</a>
 		<br />
-		Last Updated January 3, 2016
+		Last Updated January 9, 2016
 		<span style="position:relative; top:-1px;">&thinsp;&mdash;&thinsp;</span>
 		Code maintained on
 		<a class="nostyle" href="https://github.com/GeekLogan/OSU-SPS-Website">GitHub</a>
