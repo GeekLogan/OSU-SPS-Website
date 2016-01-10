@@ -7,23 +7,28 @@ body {
   font-size: 14px;
 }
 
+th, td {
+	padding-right: 15px;
+}
+
 div#top {
     position: fixed;
     top: 0px;
     left: 0px;
+	z-index: 999;
 
 	width: 100%;
 	background-color: white;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	font-size:25px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
 	margin-bottom: 20px;
 
     border-bottom-width: 1px;
     border-bottom-color: #C8C8C8;
     border-bottom-style: solid;
-
-    z-index: 999;
 }
 
 div#spacer {
@@ -32,14 +37,29 @@ div#spacer {
     width:100%;
 }
 
-center#footer {
+div#footer {
 	margin-top: 10px;
 	color: black;
     margin-bottom: 25px;
+	text-align: center;
+}
+
+ul#links-list {
+	padding-bottom:0px;
+	padding-top: 0px;
+}
+
+table#contact-table {
+
+}
+
+.it {
+	font-style: italic;
 }
 
 div.tohide {
-	font-size:15px;
+	padding-top: 15px;
+	font-size: 15px;
 }
 
 div.card {
@@ -47,7 +67,7 @@ div.card {
 	margin: 10px;
 	background-color: white;
 	color: black;
-	width: 80%;
+	width: 90%;
 	text-align: left;
 
 	margin-top: 30px;
@@ -58,13 +78,27 @@ div.card {
     border-style: solid;
 }
 
+/*
+div.card:hover {
+	border-color: red;
+}
+*/
+
 div.facebook-card {
 	background-color:#3b5998;
-	color:white;
+	color: white;
 	font-weight: bold;
 }
 
+h3.link-header {
+	font-weight: normal;
+	font-size: 17px;
+}
+
 a:link.cardlink, a:visited.cardlink,
-a:hover.cardlink, a:active.cardlink  {
-	text-decoration: none;
+a:hover.cardlink, a:active.cardlink,
+a:link.nostyle, a:visited.nostyle,
+a:hover.nostyle, a:active.nostyle {
+	text-decoration: inherit;
+	color: inherit;
 }

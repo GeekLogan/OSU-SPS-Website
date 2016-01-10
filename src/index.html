@@ -3,59 +3,87 @@
 <head>
 
 <title>Society of Physics | Ohio State University</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta name="description" content="Society of Physics Students at Ohio State">
 <meta name="author" content="Logan Walker">
 <meta charset="utf-8">
 
 <script>
+/*
 $(document).ready(function() { 
-	['lib', 'contact', 'info'].forEach(function( name ){
-		$( "#card_" + name ).find(".tohide").toggle(0, function(){});
+	['lib', 'contact', 'links', 'upcoming'].forEach(function( name ){
+		$( "#card_" + name ).find(".tohide").slideToggle(0, function(){});
 		$("#card_" + name).click(function(){
-			$("#card_" + name).find(".tohide").toggle("fast", function(){});
+			$("#card_" + name).find(".tohide").slideToggle("fast", function(){});
 		});
 	});
 });
+*/
 </script>
 
 </head>
 
 <body>
+<center>
 
 <div id="spacer"></div>
 <div id="top">
-	<center>
-		<b>Ohio State Society of Physics Students</b>
-	</center>
+	Ohio State Society of Physics Students
 </div>
 
-<center>
 <div class="card" id="card_info">
-	Information
+	Welcome
 	<div class="tohide">
-		<br />
-		Test
+		The Society of Physics Students at Ohio State University is a collegiate
+		chapter of the national Society of Physics Students organization.
+		The only requirement for membership is that you be interested in physics.
+		SPS exists to help students transform themselves into contributing members
+		of the professional community. Course work develops only one range of skills.
+		Other skills needed to flourish professionally include effective communication
+		and personal interactions, leadership experience, establishing a personal network
+		of contacts, presenting scholarly work in professional meetings and journals, and
+		outreach services to the campus and local communities. SPS offers the opportunity
+		for these important enrichments to the student’s experience.
+		<br /><br />
+		<a href="https://www.facebook.com/groups/SPSatOSU/" class="nostyle it">
+			Taken from the Facebook page.
+		</a>
+	</div>
+</div>
+
+<div class="card" id="card_upcoming">
+	Upcoming Events
+	<div class="tohide">
+		No events are currently scheduled, come back soon!
 	</div>
 </div>
 
 <div class="card" id="card_contact">
 	Contact Officers
 	<div class="tohide">
-		<br />
-		Officers:
-	</div>
-</div>
-
-<div class="card" id="card_lib">
-	<!--
-		https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/edit?usp=sharing
-	-->
-	Physics Library
-	<div class="tohide">
-		<br />
-		<iframe id="book-frame" style="width:100%; height:400px;" src="https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/pubhtml?widget=true&amp;headers=false"></iframe>
+		<table id="contact-table">
+			<tr>
+				<th>President</th>
+				<td>Stevie Slaughter</td>
+				<td><i>slaughter.100@osu.edu</i></td>
+			</tr>
+			<tr>
+				<th>Vice President</th>
+				<td>Catharine Shipps</td>
+				<td><i>shipps.5@osu.edu</i></td>
+			</tr>
+			<tr>
+				<th>Treasurer</th>
+				<td>Mo Akbar</td>
+				<td><i>akbar.24@osu.edu</i></td>
+			</tr>
+			<tr>
+				<th>Secretary</th>
+				<td>Robert McKay</td>
+				<td><i>mckay.130@osu.edu</i></td>
+			</tr>
+		</table>
 	</div>
 </div>
 
@@ -65,17 +93,43 @@ $(document).ready(function() {
 	</div>
 </a>
 
-</center>
+<div class="card" id="card_links">
+	Useful Physics Links
+	<div class="tohide" style="padding-top: 0px;">
+		<h3 class="link-header">Other OSU Physics Clubs</h3>
+		<blockquote>
+		<a class="nostyle it" href="https://www.facebook.com/groups/463807260312076/">OSU's Sigma Pi Sigma Chapter Facebook Group (&Sigma;&Pi;&Sigma;)</a>
+		<br /><br />
+		<a class="nostyle it" href="https://u.osu.edu/swip/">Society for Women in Physics at OSU (SWIP)</a>
+		<a class="nostyle it" href="https://www.facebook.com/groups/swip.osu/"> [Facebook]</a>
+		<br /><br />
+		<a class="nostyle" href="http://osuwomeninphysics.wordpress.com/">OSU Women in Physics Blog: A Day in the Life...</a>
+		</blockquote>
+	</div>
+</div>
 
-<center id="footer">
+<div class="card" id="card_lib">
+	Physics Library Catalog
+	<div class="tohide">
+		Below is a list of the books available from the SPS library in Smith Lab.
+		See a SPS officer if you would like to check a book out.
+		<br /><br />
+		<iframe id="book-frame" style="width:100%; height:400px;" src="https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/pubhtml?widget=true&amp;headers=false">
+			If the table does not load, the catalog can also be accessed from
+			<a href="https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/edit?usp=sharing">here</a>.
+		</iframe>
+	</div>
+</div>
+
+<div id="footer">
 	Website Developed 2016 by
-	<a class="nostyle" href="mailto:walker.1698@osu.edu">Logan Walker</a>
-	<br />
+	<a class="nostyle" href="mailto:walker.1698@osu.edu">Logan Walker</a> <br />
 	Last Updated January 9, 2016
 	<span style="position:relative; top:-1px;">&thinsp;&mdash;&thinsp;</span>
 	Code maintained on
 	<a class="nostyle" href="https://github.com/GeekLogan/OSU-SPS-Website">GitHub</a>
-</center>
+</div>
 
+</center>
 </body>
 </html>
