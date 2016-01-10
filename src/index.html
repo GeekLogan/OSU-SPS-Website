@@ -9,20 +9,29 @@
 <meta name="author" content="Logan Walker">
 <meta charset="utf-8">
 
+<script>
+$(document).ready(function() { 
+	['lib', 'contact', 'info'].forEach(function( name ){
+		$( "#card_" + name ).find(".tohide").toggle(0, function(){});
+		$("#card_" + name).click(function(){
+			$("#card_" + name).find(".tohide").toggle("fast", function(){});
+		});
+	});
+});
+</script>
+
 </head>
 
 <body>
 
+<div id="spacer"></div>
 <div id="top">
 	<center>
 		<b>Ohio State Society of Physics Students</b>
 	</center>
 </div>
 
-<div id="main">
-<div class="spacerdiv"></div>
 <center>
-
 <div class="card" id="card_info">
 	Information
 	<div class="tohide">
@@ -46,7 +55,7 @@
 	Physics Library
 	<div class="tohide">
 		<br />
-		<iframe style="width:100%; height:400px;" src="https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/pubhtml?widget=true&amp;headers=false"></iframe>
+		<iframe id="book-frame" style="width:100%; height:400px;" src="https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/pubhtml?widget=true&amp;headers=false"></iframe>
 	</div>
 </div>
 
@@ -56,29 +65,17 @@
 	</div>
 </a>
 
-<script>
-['lib', 'contact', 'info'].forEach(function( name ){
-	$( "#card_" + name ).find(".tohide").toggle(0, function(){});
-	$("#card_" + name).click(function(){
-		$("#card_" + name).find(".tohide").toggle("fast", function(){});
-	});
-});
-</script>
-
 </center>
-</div>
 
-<div id="footer">
-	<center>
-		Website Developed 2016 by
-		<a class="nostyle" href="mailto:walker.1698@osu.edu">Logan Walker</a>
-		<br />
-		Last Updated January 9, 2016
-		<span style="position:relative; top:-1px;">&thinsp;&mdash;&thinsp;</span>
-		Code maintained on
-		<a class="nostyle" href="https://github.com/GeekLogan/OSU-SPS-Website">GitHub</a>
-	</center>
-</div>
+<center id="footer">
+	Website Developed 2016 by
+	<a class="nostyle" href="mailto:walker.1698@osu.edu">Logan Walker</a>
+	<br />
+	Last Updated January 9, 2016
+	<span style="position:relative; top:-1px;">&thinsp;&mdash;&thinsp;</span>
+	Code maintained on
+	<a class="nostyle" href="https://github.com/GeekLogan/OSU-SPS-Website">GitHub</a>
+</center>
 
 </body>
 </html>

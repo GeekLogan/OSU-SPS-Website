@@ -26,11 +26,13 @@ div#top {
     z-index: 999;
 }
 
-div#main {
-	margin: 0px;
+div#spacer {
+    z-index:0;
+    height:60px;
+    width:100%;
 }
 
-div#footer {
+center#footer {
 	margin-top: 10px;
 	color: black;
     margin-bottom: 25px;
@@ -54,12 +56,6 @@ div.card {
     border-width: 1px;
     border-color: #C8C8C8;
     border-style: solid;
-}
-
-div.spacerdiv {
-    z-index:0;
-    height:60px;
-    width:100%;
 }
 
 div.facebook-card {
