@@ -25,6 +25,7 @@ div#top {
 	font-weight: bold;
 	text-align: center;
 	margin-bottom: 20px;
+	line-height: 140%;
 
     border-bottom-width: 1px;
     border-bottom-color: #C8C8C8;
@@ -51,6 +52,14 @@ ul#links-list {
 
 table#contact-table {
 
+}
+
+img#fb-logo {
+	position: relative;
+	height: 61px;
+	top: -20px;
+	left: 20px;
+	float: right;
 }
 
 .it {
