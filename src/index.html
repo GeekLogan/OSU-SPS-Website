@@ -26,8 +26,12 @@
 <div class="spacerdiv"></div>
 <center>
 
-<div class="card">
-Information
+<div class="card" id="card_info">
+	Information
+	<div class="tohide">
+		<br />
+		Test
+	</div>
 </div>
 
 <div class="card" id="card_contact">
@@ -39,6 +43,9 @@ Information
 </div>
 
 <div class="card" id="card_lib">
+	<!--
+		https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/edit?usp=sharing
+	-->
 	Physics Library
 	<div class="tohide">
 		<br />
@@ -47,17 +54,14 @@ Information
 </div>
 
 <a href="https://www.facebook.com/groups/SPSatOSU/" class="cardlink">
-	<div class="card">
-		<span style="color:#3b5998;">
-			<b>FaceBook</b>
-		</span>
+	<div class="card facebook-card">
+		Group Facebook Page
 	</div>
 </a>
 
 <script>
-$( ".tohide" ).toggle(0, function(){});
-
-['lib', 'contact'].forEach(function( name ){
+['lib', 'contact', 'info'].forEach(function( name ){
+	$( "#card_" + name ).find(".tohide").toggle(0, function(){});
 	$("#card_" + name).click(function(){
 		$("#card_" + name).find(".tohide").toggle("fast", function(){});
 	});

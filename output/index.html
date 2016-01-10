@@ -3,11 +3,10 @@
 <head>
 
 <title>Society of Physics | Ohio State University</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <meta name="description" content="Society of Physics Students at Ohio State">
 <meta name="author" content="Logan Walker">
 <meta charset="utf-8">
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <style>
 	body {
@@ -17,20 +16,6 @@
 	  background-color: #e0e0e0;
 	  line-height: 150%;
 	  font-size: 14px;
-	}
-	
-	a.nostyle:link {
-	    text-decoration: inherit;
-	    color: inherit;
-	}
-	
-	a.nostyle:visited {
-	    text-decoration: inherit;
-	    color: inherit;
-	}
-	
-	table {
-	  border-collapse: collapse;
 	}
 	
 	div#top {
@@ -49,7 +34,7 @@
 	    border-bottom-color: #C8C8C8;
 	    border-bottom-style: solid;
 	
-	    z-index: 2;
+	    z-index: 999;
 	}
 	
 	div#main {
@@ -59,43 +44,27 @@
 	div#footer {
 		margin-top: 10px;
 		color: black;
-		text-alignment: center;
 	    margin-bottom: 25px;
+	}
+	
+	div.tohide {
+		font-size:15px;
 	}
 	
 	div.card {
 	    font-size: 20px;
-	
 		margin: 10px;
 		background-color: white;
 		color: black;
 		width: 80%;
+		text-align: left;
 	
 		margin-top: 30px;
 		margin-bottom: 30px;
 		padding: 20px;
-	
 	    border-width: 1px;
 	    border-color: #C8C8C8;
 	    border-style: solid;
-	
-		text-align: left;
-	}
-	
-	a:link.cardlink { /* unvisited */
-		text-decoration: none;
-	}
-	
-	a:visited.cardlink { /* visited */
-		text-decoration: none;
-	}
-	
-	a:hover.cardlink { /* mouse over */
-		text-decoration: none;
-	}
-	
-	a:active.cardlink { /* selected */
-		text-decoration: none;
 	}
 	
 	div.spacerdiv {
@@ -104,20 +73,15 @@
 	    width:100%;
 	}
 	
-	a:link#home { /* unvisited */
-	    color: black;
+	div.facebook-card {
+		background-color:#3b5998;
+		color:white;
+		font-weight: bold;
 	}
 	
-	a:visited#home { /* visited */
-	    color: black;
-	}
-	
-	a:hover#home { /* mouse over */
-	    color: black; /* red? */
-	}
-	
-	a:active#home { /* selected */
-	    color: black;
+	a:link.cardlink, a:visited.cardlink,
+	a:hover.cardlink, a:active.cardlink  {
+		text-decoration: none;
 	}
 
 </style>
@@ -133,13 +97,15 @@
 </div>
 
 <div id="main">
-
 <div class="spacerdiv"></div>
-
 <center>
 
-<div class="card">
-Information
+<div class="card" id="card_info">
+	Information
+	<div class="tohide">
+		<br />
+		Test
+	</div>
 </div>
 
 <div class="card" id="card_contact">
@@ -151,6 +117,9 @@ Information
 </div>
 
 <div class="card" id="card_lib">
+	<!--
+		https://docs.google.com/spreadsheets/d/1t_sxZH7jvzOluM8tILO-m4LGJ8op-Uqwp5MM4vlVgQ0/edit?usp=sharing
+	-->
 	Physics Library
 	<div class="tohide">
 		<br />
@@ -159,27 +128,21 @@ Information
 </div>
 
 <a href="https://www.facebook.com/groups/SPSatOSU/" class="cardlink">
-	<div class="card">
-		<span style="color:#3b5998;">
-			<b>FaceBook</b>
-		</span>
+	<div class="card facebook-card">
+		Group Facebook Page
 	</div>
 </a>
 
 <script>
-
-$( ".tohide" ).toggle(0, function(){});
-
-['lib', 'contact'].forEach(function( name ){
+['lib', 'contact', 'info'].forEach(function( name ){
+	$( "#card_" + name ).find(".tohide").toggle(0, function(){});
 	$("#card_" + name).click(function(){
 		$("#card_" + name).find(".tohide").toggle("fast", function(){});
 	});
 });
-
 </script>
 
 </center>
-
 </div>
 
 <div id="footer">
