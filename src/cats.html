@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Society of Physics Students | Cats</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<meta name="description" content="Cats of the Society of Physics Students at Ohio State">
+<meta name="author" content="Logan Walker">
+<meta charset="utf-8">
+
+<style type="text/css">
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+}
+
+div.star {
+	position: fixed;
+}
+</style>
+
+<script>
+var maxsize = 5;
+var starcount = 100; 
+
+function rand( range ) {
+	return Math.floor((Math.random() * range) + 1);
+}
+
+function starDiv() {
+	var size = rand( maxsize );
+	var x = rand( scr[0] );
+	var y = rand( scr[1] );
+		
+	var out = "<div class='star' style='width: <1->; height:"
+	out = out + " <1->; border-radius: <1>; top:<2>; left:<3>;"
+	out = out + "background-color: <4>;'></div>";
+	
+	out = out.replace(/<1->/g, (size * 2)+"px");
+	out = out.replace(/<1>/g, size+"px");
+	out = out.replace(/<2>/, y+"px");
+	out = out.replace(/<3>/, x+"px");
+	out = out.replace(/<4>/, "white");
+	
+	return out;
+}
+
+function moveStars() {	
+	for( i = 0; i < stars.length; i++ ) {
+		var newleft = parseInt(stars[i].style.left) + 1;
+		
+		if( newleft > scr[0] ) {
+			newleft = -1 * parseInt( stars[i].style.width );
+			stars[i].style.top = rand( scr[1] ) + "px";
+		}
+				
+		stars[i].style.left = newleft + "px";
+	}
+		
+	window.setTimeout(moveStars, 30);
+}
+
+function genBackground() {
+	$('.star').remove();
+	
+	scr = [
+		$(document).width(),
+		$(document).height()
+	];
+	
+	for (i = 0; i < starcount; i++) {
+		$('body').append( starDiv() );
+	}
+	
+	stars = $('.star');
+	cat = $('img');
+	
+	moveStars();
+	moveCat();
+}
+
+function moveCat() {
+	var newleft = 0;
+	if(newleft == $(cat).position().left) 
+		newleft = scr[0] - $(cat).width() + 50;
+		
+	var newtop = rand( scr[1] - $(cat).height() );
+	
+	$(cat).animate({"left" : newleft, "top" : newtop}, 3000, function(){
+		moveCat();
+	});
+}
+
+window.onresize = genBackground;
+
+$(document).ready(function() { 
+	genBackground();
+});
+
+</script>
+
+</head>
+
+<body>
+
+<img src="img/etc/cat.png" width="300px" style="position: relative; z-index:999;" />
+</body>
+</html>
