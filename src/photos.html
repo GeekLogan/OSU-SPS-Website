@@ -17,6 +17,13 @@
 
 	ga('create', 'UA-72163478-1', 'auto');
 	ga('send', 'pageview');
+	
+	$(document).ready(function(){
+		$('.tohide').slideToggle(0, function(){});
+		$('.card').click(function(){
+			$(this).find('.tohide').slideToggle("slow", function(){});
+		});
+	});
 </script>
 
 <style type="text/css">
@@ -88,6 +95,10 @@
 		border-color: #C8C8C8;
 		border-style: solid;
 	}
+	
+	div.tohide>img {
+		width: 400px;
+	}
 
 	a:link.cardlink, a:visited.cardlink,
 	a:hover.cardlink, a:active.cardlink,
@@ -103,13 +114,11 @@
 <body>
 <center>
 
-<div id="spacer"></div>
-<div id="top">
-	Ohio State Society of Physics Students
-</div>
-
 <div class="card" id="card_info">
 	Test
+	<div class="tohide">
+		<img src="img/old/flyers/030930.jpeg" />
+	</div>
 </div>
 
 <div id="footer">
