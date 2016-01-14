@@ -18,6 +18,8 @@
 | smith1011s | HP LaserJet 4250 | duplex |
 | smith2097 | HP LaserJet 4700 | color, duplex |
 
+From (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
+
 ##Mac OS X Configuration
 
 To configure an Apple computer to use a printer in the OSU Physics department, follow these steps:
@@ -41,7 +43,11 @@ Because every distribution of Linux is different, below are a general
 set of steps to follow, but the details will need to be provided by the
 vendor of the distribution:
 
-Coming soon, come back later!
+1. Ensure that CUPS is installed and configured as the system printing sublayer.
+2. Add <code>ServerName lpd.physics.ohio-state.edu</code> to the end of <code>/etc/cups/client.conf</code>
+3. Reload CUPS and all printers will be available.
+
+From (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
 
 ##Windows Configuration
 
