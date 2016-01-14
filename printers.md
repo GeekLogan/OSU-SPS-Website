@@ -18,7 +18,7 @@
 | prbx423 | HP LaserJet 4000 | duplex |
 | smith2097 | HP LaserJet 4700 | color, duplex |
 
-Modified from (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
+Modified from [Here](http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters).
 
 ##Mac OS X Configuration
 
@@ -37,7 +37,7 @@ To configure an Apple Mac to use a printer in the OSU Physics department, follow
 11. If an error complains that it can't verify the printer, click continue.
 12. Select the printer when printing.
 
-Modified from (Here)[https://lapserv.maths.cam.ac.uk/docs/osxprint108.html].
+Modified from [Here](https://lapserv.maths.cam.ac.uk/docs/osxprint108.html).
 
 ##Windows Configuration
 
@@ -56,7 +56,7 @@ Modified from (Here)[https://lapserv.maths.cam.ac.uk/docs/osxprint108.html].
 13. Click finish to close the printer-adding menu. 
 14. Select the printer when printing.
 
-Modified from (here)[http://campus.mst.edu/cis/desktop/documentation/pc/win7_x64/lpr_printer/install.htm].
+Modified from [here](http://campus.mst.edu/cis/desktop/documentation/pc/win7_x64/lpr_printer/install.htm).
 
 ##Linux Configuration
 
@@ -68,10 +68,4 @@ vendor of the distribution:
 2. Add <code>ServerName lpd.physics.ohio-state.edu</code> to the end of <code>/etc/cups/client.conf</code>
 3. Reload CUPS and all printers will be available.
 
-Modified from (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
-
-##References
-
-- http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters
-- https://www.freebsd.org/doc/en/articles/cups/printing-cups-clients.html 
-- https://lapserv.maths.cam.ac.uk/docs/osxprint108.html
+Modified from [Here](http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters).
