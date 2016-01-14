@@ -4,7 +4,7 @@
 
 | Name | Model | Features |
 |------|-------|----------|
-| smith1011s (LOUNGE PRINTER) | HP LaserJet 4250 | duplex |
+| smith1011s <b>LOUNGE PRINTER</b> | HP LaserJet 4250 | duplex |
 | prbx002 | HP LaserJet 4700 | color, duplex |
 | prbx019 | HP LaserJet 4700 | color, duplex |
 | prb1040a | Xerox WorkCentre 7845 | color, duplex, scanning |
@@ -56,7 +56,7 @@ Modified from [Here](https://lapserv.maths.cam.ac.uk/docs/osxprint108.html).
 13. Click finish to close the printer-adding menu. 
 14. Select the printer when printing.
 
-Modified from [here](http://campus.mst.edu/cis/desktop/documentation/pc/win7_x64/lpr_printer/install.htm).
+Modified from [Here](http://campus.mst.edu/cis/desktop/documentation/pc/win7_x64/lpr_printer/install.htm).
 
 ##Linux Configuration
 
