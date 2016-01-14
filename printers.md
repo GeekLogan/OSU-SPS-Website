@@ -39,18 +39,6 @@ To configure an Apple Mac to use a printer in the OSU Physics department, follow
 
 Modified from (Here)[https://lapserv.maths.cam.ac.uk/docs/osxprint108.html].
 
-##Linux Configuration
-
-Because every distribution of Linux is different, below are a general
-set of steps to follow, but the details will need to be provided by the
-vendor of the distribution:
-
-1. Ensure that CUPS is installed and configured as the system printing sublayer.
-2. Add <code>ServerName lpd.physics.ohio-state.edu</code> to the end of <code>/etc/cups/client.conf</code>
-3. Reload CUPS and all printers will be available.
-
-Modified from (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
-
 ##Windows Configuration
 
 1. Go To "Programs and Features" in the Control Panel.
@@ -67,6 +55,20 @@ Modified from (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsCom
 12. Click "ok" and then "Do not share this printer" and "ok" again.
 13. Click finish to close the printer-adding menu. 
 14. Select the printer when printing.
+
+Modified from (here)[http://campus.mst.edu/cis/desktop/documentation/pc/win7_x64/lpr_printer/install.htm].
+
+##Linux Configuration
+
+Because every distribution of Linux is different, below are a general
+set of steps to follow, but the details will need to be provided by the
+vendor of the distribution:
+
+1. Ensure that CUPS is installed and configured as the system printing sublayer.
+2. Add <code>ServerName lpd.physics.ohio-state.edu</code> to the end of <code>/etc/cups/client.conf</code>
+3. Reload CUPS and all printers will be available.
+
+Modified from (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
 
 ##References
 
