@@ -4,6 +4,7 @@
 
 | Name | Model | Features |
 |------|-------|----------|
+| smith1011s (LOUNGE PRINTER) | HP LaserJet 4250 | duplex |
 | prbx002 | HP LaserJet 4700 | color, duplex |
 | prbx019 | HP LaserJet 4700 | color, duplex |
 | prb1040a | Xerox WorkCentre 7845 | color, duplex, scanning |
@@ -15,14 +16,13 @@
 | prb3015 | HP LaserJet 4050 | duplex |
 | prbx301 | Xerox WorkCentre 7845 | color, duplex, scanning |
 | prbx423 | HP LaserJet 4000 | duplex |
-| smith1011s | HP LaserJet 4250 | duplex |
 | smith2097 | HP LaserJet 4700 | color, duplex |
 
-From (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
+Modified from (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
 
 ##Mac OS X Configuration
 
-To configure an Apple computer to use a printer in the OSU Physics department, follow these steps:
+To configure an Apple Mac to use a printer in the OSU Physics department, follow these steps:
 
 1. Bring up the System Preferences tool.
 2. Choose Print and Scan.
@@ -37,6 +37,8 @@ To configure an Apple computer to use a printer in the OSU Physics department, f
 11. If an error complains that it can't verify the printer, click continue.
 12. Select the printer when printing.
 
+Modified from (Here)[https://lapserv.maths.cam.ac.uk/docs/osxprint108.html].
+
 ##Linux Configuration
 
 Because every distribution of Linux is different, below are a general
@@ -47,11 +49,24 @@ vendor of the distribution:
 2. Add <code>ServerName lpd.physics.ohio-state.edu</code> to the end of <code>/etc/cups/client.conf</code>
 3. Reload CUPS and all printers will be available.
 
-From (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
+Modified from (Here)[http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters].
 
 ##Windows Configuration
 
-Coming soon, come back later!
+1. Go To "Programs and Features" in the Control Panel.
+2. Select "Turn Windows features on or off" on the left-hand side.
+3. In the resulting window, select "LPR Port Monitor" in the "Print and Document Services" folder.
+4. Apply the settings and close the windows.
+5. Open "Devices and Printers" in the Control Panel.
+6. Select "Add a printer" at the top of the page.
+7. Press "Add a local printer" in the resulting window.
+8. Select the "Create a new port" radio button and select "LPR Port" from the "Type of port" dropdown.
+9. For "Name of address of server providing lpd" enter <code>lpd.physics.ohio-state.edu</code>.
+10. For "Name of printer or print queue on that server" enter the name of the printer from the above table and click ok.
+11. Choose the printer model in the driver selector screen; if there is not an exact match, it is acceptable to enter a close match to the model number (i.e. Cannon 2000 instead of Cannon 2001).
+12. Click "ok" and then "Do not share this printer" and "ok" again.
+13. Click finish to close the printer-adding menu. 
+14. Select the printer when printing.
 
 ##References
 
