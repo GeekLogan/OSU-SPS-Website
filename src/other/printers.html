@@ -1,0 +1,137 @@
+﻿<h1>Printing to Department of Physics Printers from Personal Devices</h1>
+
+<h2>Printers</h2>
+
+<table>
+	<thead>
+	<tr>
+	  <th>Name</th>
+	  <th>Model</th>
+	  <th>Features</th>
+	</tr>
+	</thead>
+	<tbody><tr>
+	  <td>smith1011s <b>LOUNGE PRINTER</b></td>
+	  <td>HP LaserJet 4250</td>
+	  <td>duplex</td>
+	</tr>
+	<tr>
+	  <td>prbx002</td>
+	  <td>HP LaserJet 4700</td>
+	  <td>color, duplex</td>
+	</tr>
+	<tr>
+	  <td>prbx019</td>
+	  <td>HP LaserJet 4700</td>
+	  <td>color, duplex</td>
+	</tr>
+	<tr>
+	  <td>prb1040a</td>
+	  <td>Xerox WorkCentre 7845</td>
+	  <td>color, duplex, scanning</td>
+	</tr>
+	<tr>
+	  <td>prb1199</td>
+	  <td>HP LaserJet 4345mfp</td>
+	  <td>duplex, scanning</td>
+	</tr>
+	<tr>
+	  <td>prb2020</td>
+	  <td>HP LaserJet 4250</td>
+	  <td>duplex</td>
+	</tr>
+	<tr>
+	  <td>prb2050</td>
+	  <td>HP LaserJet 4700</td>
+	  <td>color, duplex</td>
+	</tr>
+	<tr>
+	  <td>prbm2020</td>
+	  <td>HP LaserJet 4700</td>
+	  <td>color, duplex</td>
+	</tr>
+	<tr>
+	  <td>prbm2050</td>
+	  <td>HP LaserJet m602dn</td>
+	  <td>duplex</td>
+	</tr>
+	<tr>
+	  <td>prb3015</td>
+	  <td>HP LaserJet 4050</td>
+	  <td>duplex</td>
+	</tr>
+	<tr>
+	  <td>prbx301</td>
+	  <td>Xerox WorkCentre 7845</td>
+	  <td>color, duplex, scanning</td>
+	</tr>
+	<tr>
+	  <td>prbx423</td>
+	  <td>HP LaserJet 4000</td>
+	  <td>duplex</td>
+	</tr>
+	<tr>
+	  <td>smith2097</td>
+	  <td>HP LaserJet 4700</td>
+	  <td>color, duplex</td>
+	</tr>
+</tbody></table>
+
+
+<p>Modified from <a href="http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters">Here</a>.</p>
+
+<h2>Mac OS X Configuration</h2>
+
+<p>To configure an Apple Mac to use a printer in the OSU Physics department, follow these steps:</p>
+
+<ol>
+	<li>Bring up the System Preferences tool.</li>
+	<li>Choose Print and Scan.</li>
+	<li>Click on the plus sign to add a printer.</li>
+	<li>Choose the IP tab (as opposed to Default, Fax or Windows).</li>
+	<li>Put an address of <code>lpd.physics.ohio-state.edu</code>.</li>
+	<li>Put a queue of <code>printers/NAME</code> (use appropriate printer name from table above).</li>
+	<li>Change the name to a good name to remember the printer by (ex: “Physics Lounge”).</li>
+	<li>Enter the printer’s location (ex: “Smith 1011”).</li>
+	<li>Choose the appropriate printer driver (The lounge printer will work with “Default PostScript Printer”).</li>
+	<li>Add the printer.</li>
+	<li>If an error complains that it can’t verify the printer, click continue.</li>
+	<li>Select the printer when printing.</li>
+</ol>
+
+<p>Modified from <a href="https://lapserv.maths.cam.ac.uk/docs/osxprint108.html">Here</a>.</p>
+
+<h2>Windows Configuration</h2>
+
+<ol>
+	<li>Go To “Programs and Features” in the Control Panel.</li>
+	<li>Select “Turn Windows features on or off” on the left-hand side.</li>
+	<li>In the resulting window, select “LPR Port Monitor” in the “Print and Document Services” folder.</li>
+	<li>Apply the settings and close the windows.</li>
+	<li>Open “Devices and Printers” in the Control Panel.</li>
+	<li>Select “Add a printer” at the top of the page.</li>
+	<li>Press “Add a local printer” in the resulting window.</li>
+	<li>Select the “Create a new port” radio button and select “LPR Port” from the “Type of port” dropdown.</li>
+	<li>For “Name of address of server providing lpd” enter <code>lpd.physics.ohio-state.edu</code>.</li>
+	<li>For “Name of printer or print queue on that server” enter the name of the printer from the above table and click ok.</li>
+	<li>Choose the printer model in the driver selector screen; if there is not an exact match, it is acceptable to enter a close match to the model number (i.e. Cannon 2000 instead of Cannon 2001).</li>
+	<li>Click “ok” and then “Do not share this printer” and “ok” again.</li>
+	<li>Click finish to close the printer-adding menu. </li>
+	<li>Select the printer when printing.</li>
+</ol>
+
+<p>Modified from <a href="http://campus.mst.edu/cis/desktop/documentation/pc/win7_x64/lpr_printer/install.htm">Here</a>.</p>
+
+<h2>Linux Configuration</h2>
+
+<p>Because every distribution of Linux is different, below are a general <br>
+set of steps to follow, but the details will need to be provided by the <br>
+vendor of the distribution:</p>
+
+<ol>
+	<li>Ensure that CUPS is installed and configured as the system printing sublayer.</li>
+	<li>Add <code>ServerName lpd.physics.ohio-state.edu</code> to the end of <code>/etc/cups/client.conf</code></li>
+	<li>Reload CUPS and all printers will be available.</li>
+</ol>
+
+<p>Modified from <a href="http://www.physics.ohio-state.edu/TWiki/bin/view/PhysicsComputingHelp/UnixPrinters">Here</a>.</p>
